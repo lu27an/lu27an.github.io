@@ -24,17 +24,35 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
           
           <div className="flex-1 space-y-8 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-geo-cyan/30 bg-geo-cyan/10 text-geo-cyan text-sm font-display font-medium tracking-wide">
-              <MapPin size={16} />
-              <span>Araçatuba, São Paulo, Brasil</span>
-            </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold font-display leading-tight">
-              Luan Augusto <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-geo-cyan to-geo-green">
-                Barboza Simão
-              </span>
-            </h1>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Profile Photo */}
+              <div className="shrink-0 relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-geo-cyan to-geo-green rounded-full blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                <img 
+                  src="/profile.jpg" 
+                  alt="Luan Simão" 
+                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-geo-midnight shadow-2xl"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://ui-avatars.com/api/?name=Luan+Simao&background=131C2A&color=10B981&size=200';
+                  }}
+                />
+              </div>
+
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-geo-cyan/30 bg-geo-cyan/10 text-geo-cyan text-sm font-display font-medium tracking-wide">
+                  <MapPin size={16} />
+                  <span>Araçatuba, São Paulo</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-6xl font-bold font-display leading-tight">
+                  Luan Augusto <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-geo-cyan to-geo-green">
+                    Barboza Simão
+                  </span>
+                </h1>
+              </div>
+            </div>
             
             <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto md:mx-0">
               Especialista em Geotecnologias, focado em transformar dados espaciais 
