@@ -19,7 +19,7 @@ export default function Experience() {
     {
       company: "Viterra",
       role: "Assistente de Topografia e Geotecnologia",
-      period: "Março de 2021 - Julho de 2024",
+      period: "Janeiro de 2022 - Julho de 2024",
       location: "Guararapes, SP",
       color: "text-geo-green",
       borderColor: "border-geo-green",
